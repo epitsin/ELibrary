@@ -36,6 +36,7 @@
     <Reference Include="System.Configuration.Install" />
     <Reference Include="System.Core" />
     <Reference Include="System.Management" />
+    <Reference Include="System.Runtime.Remoting" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -66,6 +67,16 @@
     <EmbeddedResource Include="ProjectInstaller.resx">
       <DependentUpon>ProjectInstaller.cs</DependentUpon>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ELibraryClient\ELibraryClient.csproj">
+      <Project>{7d1c755d-f865-4510-9c51-114d5992d3ba}</Project>
+      <Name>ELibraryClient</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ELibraryServer\ELibraryServer.csproj">
+      <Project>{909d60ce-e54c-4b93-b28a-ed6581bb5a85}</Project>
+      <Name>ELibraryServer</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

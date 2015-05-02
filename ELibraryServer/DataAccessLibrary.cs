@@ -1,10 +1,11 @@
 ﻿using ELibraryServer.BiblioDataSetTableAdapters;
+using System;
 using System.Data;
 using System.Data.SqlClient;
 
 namespace ELibraryServer
 {
-    public class DataAccessLibrary
+    public class DataAccessLibrary : MarshalByRefObject
     {
         public DataSet GetELibraryDataSet()
         {
