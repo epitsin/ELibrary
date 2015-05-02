@@ -11,29 +11,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eLibraryHost", "eLibraryHos
 EndProject
 Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ELibrarySetup", "ELibrarySetup\ELibrarySetup.vdproj", "{F4345E0C-67BE-479D-B8CE-6EA8CE196070}"
 EndProject
-Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ELibraryASP.NET", "http://localhost:11553", "{FF3A890E-80D3-4447-85BE-1FA22BE5D2CF}"
-	ProjectSection(WebsiteProperties) = preProject
-		UseIISExpress = "true"
-		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.5"
-		ProjectReferences = "{909d60ce-e54c-4b93-b28a-ed6581bb5a85}|ELibraryServer.dll;"
-		Debug.AspNetCompiler.VirtualPath = "/localhost_11553"
-		Debug.AspNetCompiler.PhysicalPath = "..\ELibraryASP.NET\"
-		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_11553\"
-		Debug.AspNetCompiler.Updateable = "true"
-		Debug.AspNetCompiler.ForceOverwrite = "true"
-		Debug.AspNetCompiler.FixedNames = "false"
-		Debug.AspNetCompiler.Debug = "True"
-		Release.AspNetCompiler.VirtualPath = "/localhost_11553"
-		Release.AspNetCompiler.PhysicalPath = "..\ELibraryASP.NET\"
-		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_11553\"
-		Release.AspNetCompiler.Updateable = "true"
-		Release.AspNetCompiler.ForceOverwrite = "true"
-		Release.AspNetCompiler.FixedNames = "false"
-		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "..\ELibraryASP.NET\"
-		DefaultWebSiteLanguage = "Visual C#"
-	EndProjectSection
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,10 +31,6 @@ Global
 		{3D6ABA71-4B6D-43AF-AC5E-B156409C613D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{F4345E0C-67BE-479D-B8CE-6EA8CE196070}.Debug|Any CPU.ActiveCfg = Debug
 		{F4345E0C-67BE-479D-B8CE-6EA8CE196070}.Release|Any CPU.ActiveCfg = Release
-		{FF3A890E-80D3-4447-85BE-1FA22BE5D2CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF3A890E-80D3-4447-85BE-1FA22BE5D2CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{FF3A890E-80D3-4447-85BE-1FA22BE5D2CF}.Release|Any CPU.ActiveCfg = Debug|Any CPU
-		{FF3A890E-80D3-4447-85BE-1FA22BE5D2CF}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
