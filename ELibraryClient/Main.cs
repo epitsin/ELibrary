@@ -2,6 +2,9 @@
 using System;
 using System.Data;
 using System.Windows.Forms;
+using System.Runtime.Remoting;
+using System.Runtime.Remoting.Channels;
+using System.Runtime.Remoting.Channels.Tcp;
 
 namespace ELibraryClient
 {
@@ -41,6 +44,14 @@ namespace ELibraryClient
             this.formBooks = new Books();
             this.formBooks.MdiParent = this;
             this.formBooks.WindowState = FormWindowState.Maximized;
+            this.DoClientRemotingConfiguration();
+        }
+
+        private void DoClientRemotingConfiguration()
+        {
+            TcpClientChannel channel = new TcpClientChannel();
+            ChannelServices.RegisterChannel(channel, false);
+            RemotingConfiguration.RegisterWellKnownClientType(typeof(ELibraryServer.DataAccessLibrary), "tcp://localhost:8089/ELibraryServer.rem");
         }
 
         private void ExitToolStripMenuItem_Click(object sender, System.EventArgs e)
@@ -82,5 +93,4 @@ namespace ELibraryClient
             this.formBooks.Show();
         }
     }
-
 }

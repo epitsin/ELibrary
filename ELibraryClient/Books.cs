@@ -10,6 +10,7 @@ namespace ELibraryClient
             InitializeComponent();
            // this.Load += new EventHandler(this.Books_Load);
             listBookTypes.SelectedIndexChanged += new EventHandler(this.ListBookTypes_SelectedIndexChanged);
+            dataGridView1.RowHeaderMouseDoubleClick += new DataGridViewCellMouseEventHandler(this.dataGridView1_RowHeaderMouseDoubleClick);
         }
 
         protected override void OnLoad(EventArgs e)
@@ -46,6 +47,13 @@ namespace ELibraryClient
             {
                 lblBookTypes.Text = "Selected category: " + strValue;
             }
+        }
+
+        private void dataGridView1_RowHeaderMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            SelectedBook.SelectedISBN = dataGridView1.SelectedRows[0].Cells[2].Value.ToString();
+            SelectedBook selectedBookForm = new SelectedBook();
+            selectedBookForm.ShowDialog();
         }
     }
 }
