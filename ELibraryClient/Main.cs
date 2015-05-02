@@ -23,6 +23,7 @@ namespace ELibraryClient
         {
             exitToolStripMenuItem.Click += new EventHandler(this.ExitToolStripMenuItem_Click);
             connectServerToolStripMenuItem.Click += new EventHandler(this.ConnectServerToolStripMenuItem_Click);
+            showBooksToolStripMenuItem.Click += new EventHandler(this.Books_Click);
         }
 
         private void Main_Load(object sender, EventArgs e)
