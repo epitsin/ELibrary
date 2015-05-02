@@ -41,7 +41,8 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(78, 232);
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.button1.Location = new System.Drawing.Point(175, 232);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(97, 27);
             this.button1.TabIndex = 0;
@@ -98,6 +99,7 @@
             // 
             // txtTitle
             // 
+            this.txtTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.txtTitle.Location = new System.Drawing.Point(78, 54);
             this.txtTitle.Multiline = true;
             this.txtTitle.Name = "txtTitle";
@@ -133,6 +135,7 @@
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.lblISBN);
             this.Controls.Add(this.button1);
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.Name = "SelectedBook";
             this.Text = "SelectedBook";
             this.ResumeLayout(false);
