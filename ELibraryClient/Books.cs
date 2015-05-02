@@ -8,9 +8,21 @@ namespace ELibraryClient
         public Books()
         {
             InitializeComponent();
+           // this.Load += new EventHandler(this.Books_Load);
+            listBookTypes.SelectedIndexChanged += new EventHandler(this.ListBookTypes_SelectedIndexChanged);
         }
 
-        private void frmBooks_Load(object sender, EventArgs e)
+        protected override void OnLoad(EventArgs e)
+        {
+            base.OnLoad(e);
+
+            listBookTypes.DataSource = Main.DsELibrary.Tables["BookTypes"];
+            listBookTypes.DisplayMember = "BookTypeName";
+            listBookTypes.ValueMember = "BookTypeName";
+            listBookTypes.SelectedIndex = -1;
+        }
+
+        private void Books_Load(object sender, EventArgs e)
         {
             listBookTypes.DataSource = Main.DsELibrary.Tables["BookTypes"];
             listBookTypes.DisplayMember = "BookTypeName";
@@ -18,7 +30,7 @@ namespace ELibraryClient
             listBookTypes.SelectedIndex = -1;
         }
 
-        private void listBookTypes_SelectedIndexChanged(object sender, EventArgs e)
+        private void ListBookTypes_SelectedIndexChanged(object sender, EventArgs e)
         {
             string strValue = "";
             int number;

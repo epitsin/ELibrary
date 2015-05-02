@@ -8,7 +8,7 @@ namespace ELibraryClient
     public partial class Main : Form
     {
         private Books formBooks;
-        private DataSet dsELibrary;
+        private static DataSet dsELibrary;
 
         public Main()
         {
@@ -17,7 +17,17 @@ namespace ELibraryClient
             AttachEvents();
         }
 
-        public static DataSet DsELibrary { get; set; }
+        public static DataSet DsELibrary
+        {
+            get
+            {
+                return dsELibrary;
+            }
+            set
+            {
+                dsELibrary = value;
+            }
+        }
 
         private void AttachEvents()
         {

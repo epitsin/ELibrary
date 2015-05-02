@@ -43,7 +43,7 @@
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Location = new System.Drawing.Point(158, 38);
             this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(308, 250);
+            this.dataGridView1.Size = new System.Drawing.Size(414, 394);
             this.dataGridView1.TabIndex = 0;
             // 
             // lblBooks
@@ -67,22 +67,25 @@
             // 
             // listBookTypes
             // 
+            this.listBookTypes.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.listBookTypes.FormattingEnabled = true;
             this.listBookTypes.Location = new System.Drawing.Point(22, 38);
             this.listBookTypes.Name = "listBookTypes";
-            this.listBookTypes.Size = new System.Drawing.Size(130, 251);
+            this.listBookTypes.Size = new System.Drawing.Size(130, 394);
             this.listBookTypes.TabIndex = 3;
             // 
-            // frmBooks
+            // Books
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(478, 312);
+            this.ClientSize = new System.Drawing.Size(584, 461);
             this.Controls.Add(this.listBookTypes);
             this.Controls.Add(this.lblBookTypes);
             this.Controls.Add(this.lblBooks);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "frmBooks";
+            this.Name = "Books";
             this.Text = "List of Books";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
