@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using ELibraryServer.BiblioDataSetTableAdapters;
 using System.Data;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ELibraryServer
 {
@@ -14,7 +10,7 @@ namespace ELibraryServer
             BiblioDataSet ds = new BiblioDataSet();
             BooksTableAdapter booksTA = new BooksTableAdapter();
             booksTA.Fill(ds.Books);
-            BooksTableAdapter bookTypesTA = new BooksTableAdapter();
+            BookTypesTableAdapter bookTypesTA = new BookTypesTableAdapter();
             bookTypesTA.Fill(ds.BookTypes);
 
             return ds;
