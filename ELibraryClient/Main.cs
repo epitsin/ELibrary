@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ELibraryServer;
+using System;
+using System.Data;
 using System.Windows.Forms;
 
 namespace ELibraryClient
@@ -6,11 +8,21 @@ namespace ELibraryClient
     public partial class Main : Form
     {
         private Books formBooks;
+        private DataSet dsELibrary;
 
         public Main()
         {
             InitializeComponent();
-            exitToolStripMenuItem.Click += new System.EventHandler(this.ExitToolStripMenuItem_Click);
+            booksToolStripMenuItem.Enabled = false;
+            AttachEvents();
+        }
+
+        public static DataSet DsELibrary { get; set; }
+
+        private void AttachEvents()
+        {
+            exitToolStripMenuItem.Click += new EventHandler(this.ExitToolStripMenuItem_Click);
+            connectServerToolStripMenuItem.Click += new EventHandler(this.ConnectServerToolStripMenuItem_Click);
         }
 
         private void Main_Load(object sender, EventArgs e)
@@ -24,6 +36,26 @@ namespace ELibraryClient
         {
             // The user wants to exit the application. Close everything down.
             Application.Exit();
+        }
+
+        private void ConnectServerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if(dsELibrary == null)
+            {
+                DataAccessLibrary dal = new DataAccessLibrary();
+
+                try
+                {
+                    dsELibrary = dal.GetELibraryDataSet();
+                    MessageBox.Show("Server connected");
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.Message, "Error connecting to eLibrary Server", MessageBoxButtons.OK, MessageBoxIcon.Stop);
+                }
+
+                booksToolStripMenuItem.Enabled = true;
+            }
         }
 
         private void Books_Click(object sender, EventArgs e)

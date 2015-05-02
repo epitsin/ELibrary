@@ -73,7 +73,7 @@
             this.listBookTypes.Size = new System.Drawing.Size(130, 251);
             this.listBookTypes.TabIndex = 3;
             // 
-            // Books
+            // frmBooks
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -82,7 +82,7 @@
             this.Controls.Add(this.lblBookTypes);
             this.Controls.Add(this.lblBooks);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "Books";
+            this.Name = "frmBooks";
             this.Text = "List of Books";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
