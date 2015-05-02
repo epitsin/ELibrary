@@ -39,7 +39,7 @@ namespace ELibraryClient
                 strValue = listBookTypes.SelectedIndex.ToString();
                 number = listBookTypes.SelectedIndex + 1;
                 listBookTypes.Text = "Selected category: " + strValue;
-                Main.DsELibrary.Tables["Books"].DefaultView.RowFilter = "";
+                Main.DsELibrary.Tables["Books"].DefaultView.RowFilter = "BookTypeID = " + number.ToString();
                 dataGridView1.DataSource = Main.DsELibrary.Tables["Books"];
             }
             else if(listBookTypes.SelectedIndex == -1)
