@@ -9,7 +9,29 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ELibraryClient", "ELibraryC
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "eLibraryHost", "eLibraryHost\eLibraryHost.csproj", "{3D6ABA71-4B6D-43AF-AC5E-B156409C613D}"
 EndProject
-Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ELibrarySetup", "ELibrarySetup\ELibrarySetup.vdproj", "{F4345E0C-67BE-479D-B8CE-6EA8CE196070}"
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "ELibrarySetupWizard", "ELibrarySetupWizard\ELibrarySetupWizard.vdproj", "{E7DC0D33-648A-48E7-933D-452957766D86}"
+EndProject
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "ELibraryService", "http://localhost:15940", "{85B50647-271F-4580-84E4-CBDA65C66E15}"
+	ProjectSection(WebsiteProperties) = preProject
+		UseIISExpress = "true"
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv3.0"
+		Debug.AspNetCompiler.VirtualPath = "/localhost_15940"
+		Debug.AspNetCompiler.PhysicalPath = "ELibraryService\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15940\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/localhost_15940"
+		Release.AspNetCompiler.PhysicalPath = "ELibraryService\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_15940\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		SlnRelativePath = "ELibraryService\"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -29,8 +51,12 @@ Global
 		{3D6ABA71-4B6D-43AF-AC5E-B156409C613D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D6ABA71-4B6D-43AF-AC5E-B156409C613D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3D6ABA71-4B6D-43AF-AC5E-B156409C613D}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F4345E0C-67BE-479D-B8CE-6EA8CE196070}.Debug|Any CPU.ActiveCfg = Debug
-		{F4345E0C-67BE-479D-B8CE-6EA8CE196070}.Release|Any CPU.ActiveCfg = Release
+		{E7DC0D33-648A-48E7-933D-452957766D86}.Debug|Any CPU.ActiveCfg = Debug
+		{E7DC0D33-648A-48E7-933D-452957766D86}.Release|Any CPU.ActiveCfg = Release
+		{85B50647-271F-4580-84E4-CBDA65C66E15}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B50647-271F-4580-84E4-CBDA65C66E15}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{85B50647-271F-4580-84E4-CBDA65C66E15}.Release|Any CPU.ActiveCfg = Debug|Any CPU
+		{85B50647-271F-4580-84E4-CBDA65C66E15}.Release|Any CPU.Build.0 = Debug|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
